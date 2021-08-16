@@ -13,11 +13,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  },
   "bugs": {
     "url": "https://github.com/Pasgen-Manley/Note-Taker-Write-and-Save-Notes/issues"
   },
-  "homepage": "https://github.com/Pasgen-Manley/Note-Taker-Write-and-Save-Notes#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/Pasgen-Manley/Note-Taker-Write-and-Save-Notes#readme"
 }
