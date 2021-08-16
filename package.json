@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/Pasgen-Manley/Note-Taker-Write-and-Save-Notes/issues"
   },
-  "homepage": "https://github.com/Pasgen-Manley/Note-Taker-Write-and-Save-Notes#readme"
+  "homepage": "https://github.com/Pasgen-Manley/Note-Taker-Write-and-Save-Notes#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
 }
