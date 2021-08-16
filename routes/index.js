@@ -4,4 +4,4 @@ const app = express();
 
 app.use('./notes', noteRoute);
 
-module.exports = app;
+module.exports = router;
