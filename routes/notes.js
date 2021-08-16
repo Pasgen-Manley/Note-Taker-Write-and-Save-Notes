@@ -12,7 +12,7 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
   if (!req.body.id) {
     req.body.id = uuidv4();
-    createNewNote(req.body, notes);
+    makeNote(req.body, notes);
   } else {
     editNote(req.body, notes);
   } 
@@ -21,9 +21,9 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
-  const note = findById(req.params.id, notes);
+  const note = searchId(req.params.id, notes);
 
-  removeNote(note, notes);
+  deleteNote(note, notes);
   res.json();
 });
 
