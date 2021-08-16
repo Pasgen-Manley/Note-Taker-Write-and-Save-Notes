@@ -8,7 +8,7 @@ const path = require('path');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('./api', route);
+app.use('/api', route);
 app.use(express.static('public'));
 
 
