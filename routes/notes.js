@@ -1,29 +1,29 @@
 const router = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-const { notes } = require('../db/db.json');
+const notesdb = require('../db/db.json');
 const fs = require('fs');
 
 const { makeNote, searchId, editNote, deleteNote } = require('../lib/utility');
 
 router.get('/notes', (req, res) => {
-  res.json(notes);
+  res.json(notesdb);
 });
 
 router.post('/notes', (req, res) => {
   if (!req.body.id) {
     req.body.id = uuidv4();
-    makeNote(req.body, notes);
+    makeNote(req.body, notesdb);
   } else {
-    editNote(req.body, notes);
+    editNote(req.body, notesdb);
   } 
 
   res.json(req.body);
 });
 
 router.delete('/notes/:id', (req, res) => {
-  const note = searchId(req.params.id, notes);
+  const note = searchId(req.params.id, notesdb);
 
-  deleteNote(note, notes);
+  deleteNote(note, notesdb);
   res.json();
 });
 
