@@ -5,11 +5,11 @@ const fs = require('fs');
 
 const { makeNote, searchId, editNote, deleteNote } = require('../lib/utility');
 
-notes.get('/notes', (req, res) => {
+notes.get('/', (req, res) => {
   res.json(notesdb);
 });
 
-notes.post('/notes', (req, res) => {
+notes.post('/', (req, res) => {
   if (!req.body.id) {
     req.body.id = uuidv4();
     makeNote(req.body, notesdb);
@@ -20,7 +20,7 @@ notes.post('/notes', (req, res) => {
   res.json(req.body);
 });
 
-notes.delete('/notes/:id', (req, res) => {
+notes.delete('/:id', (req, res) => {
   const note = searchId(req.params.id, notesdb);
 
   deleteNote(note, notesdb);
